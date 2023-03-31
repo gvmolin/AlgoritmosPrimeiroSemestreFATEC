@@ -5,7 +5,10 @@ public class Exercicios{
         // exercicioUm();
         // exercicioDois();
         // exercicioTres();
-        exercicioQuatro();
+        // exercicioQuatro();
+        // exercicioCinco();
+        // exercicioSeis();
+        exercicioSeisInteligente();
         
     }
 
@@ -79,4 +82,99 @@ public class Exercicios{
             "\nO terceiro jogador recebe: R$" +  String.format("%.2f", premioTres).replace(".", ",")
         );
     }
+
+    public static void exercicioCinco(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Digite a nota do trabalho de laboratório:\n");
+        double notaLab = scanner.nextDouble();
+        System.out.print("Digite a nota da avaliação semestral:\n");
+        double avalSem = scanner.nextDouble();
+        System.out.print("Digite a nota do exame final:\n");
+        double exameFinal = scanner.nextDouble();
+        scanner.close();
+
+        double media = (notaLab*2 + avalSem*3 + exameFinal*5) / 10;
+        
+        String status;
+        if(media < 3){
+            status = "reprovado";
+        } else if (media >= 3 && media < 5){
+            status = "em recuperação";
+        } else {
+            status = "aprovado";
+        };
+
+        System.out.print("A média final é de: " + media + "\n O aluno está " + status);
+    }
+
+    public static void exercicioSeis(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Descubra qual mês é correspondente ao número escolhido de 1 a 12:\n");
+        int numero = scanner.nextInt();
+        scanner.close();
+
+        String mes;
+        switch (numero) {
+            case 1:
+                mes = "janeiro";
+                break;
+            case 2: 
+                mes = "fevereiro";
+                break;
+            case 3:
+                mes = "março";
+                break;
+            case 4:
+                mes = "abril";
+                break;
+            case 5:
+                mes = "maio";
+                break;
+            case 6:
+                mes = "junho";
+                break;
+            case 7:
+                mes = "julho";
+                break;
+            case 8:
+                mes = "agosto";
+                break;
+            case 9:
+                mes = "setembro";
+                break;
+            case 10:
+                mes = "outubro";
+                break;
+            case 11:
+                mes = "novembro";
+                break;
+            case 12:
+                mes = "dezembro";
+                break;
+            default:
+                mes = "inválido";
+                System.out.print("Número invalido, tente novamente:");
+        }
+
+        if(mes != "inválido"){
+            System.out.print("O número escolhido foi o " + "'" + numero + "' que corresponde ao mês de " + mes + ".");
+        }
+    }
+
+    public static void exercicioSeisInteligente(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Descubra qual mês é correspondente ao número escolhido de 1 a 12:\n");
+        int numero = scanner.nextInt();
+        scanner.close();
+
+        String[] meses = {"janeiro", "fevereiro", "março", "abril", "maio", "junho", "julho", "agosto", "setembro", "outubro", "novembro", "dezembro"};
+        
+        if(numero>0 && numero < 12){
+            System.out.print("O número escolhido foi o " + "'" + numero + "', que corresponde ao mês de " + meses[numero - 1] + ".");
+        } else {
+            System.out.print("Número invalido, tente novamente:");
+        }
+    }
+
+    
 }
