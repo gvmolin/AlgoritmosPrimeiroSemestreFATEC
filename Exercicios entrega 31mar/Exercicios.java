@@ -161,7 +161,7 @@ public class Exercicios{
         }
     }
 
-    public static void exercicioSeisInteligente(){
+    public static void exercicioSeisMelhorado(){
         Scanner scanner = new Scanner(System.in);
         System.out.print("Descubra qual mês é correspondente ao número escolhido de 1 a 12:\n");
         int numero = scanner.nextInt();
