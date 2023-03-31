@@ -8,7 +8,7 @@ public class Exercicios{
         // exercicioQuatro();
         // exercicioCinco();
         // exercicioSeis();
-        exercicioSeisInteligente();
+        exercicioSeisMelhorado();
         
     }
 
