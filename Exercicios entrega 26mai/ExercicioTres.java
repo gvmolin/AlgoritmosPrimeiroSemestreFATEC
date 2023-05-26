@@ -10,7 +10,7 @@ public class ExercicioTres {
         String entradaSemEspaços = entrada.replaceAll("\\s", "");
         String[] arrayStr = entradaSemEspaços.split(",");
 
-        if(arrayStr.length !=6){
+        if(arrayStr.length != 6){
             throw new Error("O programa aceita 6 numeros!!!", null);
         }
 
